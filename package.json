@@ -1,18 +1,22 @@
 {
-  "name": "ott-platform",
+  "name": "@repo/ott",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
- "scripts": {
-  "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-  "build": "tsc",
-  "start": "node dist/index.js"
-},
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "web:dev": "turbo run dev --filter=web",
+    "cms:dev": "turbo run dev --filter=cms",
+    "web:build": "turbo run build --filter=web",
+    "cms:build": "turbo run build --filter=cms"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Amit Sangal",
   "license": "ISC",
   "packageManager": "pnpm@10.9.0",
   "devDependencies": {
-    "turbo": "^2.5.0"
+    "turbo": "latest"
   }
 }

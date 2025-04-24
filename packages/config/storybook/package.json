@@ -1,0 +1,25 @@
+{
+  "name": "@repo/storybook-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "main": "main.ts",
+  "types": "main.ts",
+  "files": [
+    "main.ts",
+    "preview.ts",
+    "theme.ts"
+  ],
+  "dependencies": {
+    "@storybook/addon-essentials": "^7.5.3",
+    "@storybook/addon-interactions": "^7.5.3",
+    "@storybook/addon-links": "^7.5.3",
+    "@storybook/blocks": "^7.5.3",
+    "@storybook/react": "^7.5.3",
+    "@storybook/react-vite": "^7.5.3",
+    "@storybook/testing-library": "^0.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}

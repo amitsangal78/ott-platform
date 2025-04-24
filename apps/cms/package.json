@@ -1,0 +1,40 @@
+{
+  "name": "cms",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/redux-config": "workspace:*",
+    "@repo/shadcn-config": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^2.0.0"
+  },
+  "devDependencies": {
+    "@repo/storybook-config": "workspace:*",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.16",
+    "globals": "^16.0.0",
+    "postcss": "^8.4.31",
+    "storybook": "^8.6.12",
+    "tailwindcss": "^3.3.5",
+    "typescript": "~5.7.2",
+    "vite": "^6.3.1"
+  }
+}

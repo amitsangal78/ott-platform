@@ -1,22 +1,40 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "pipeline": {
+  "globalDependencies": [".env", "pnpm-lock.yaml", "**/.env.*local"],
+  "globalEnv": ["NODE_ENV"],
+  "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".next/**"]
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "build/**",
+        "out/**",
+        "!.next/cache/**"
+      ]
     },
     "dev": {
       "cache": false,
       "persistent": true
     },
-    "lint": {},
+    "lint": {
+      "cache": true,
+      "outputs": ["lint-report.json"]
+    },
     "test": {
-      "dependsOn": ["build"]
+      "dependsOn": ["^build", "build"]
     },
     "storybook": {
       "dependsOn": ["^build"],
       "cache": false,
       "persistent": true
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "cache": true
+    },
+    "format": {
+      "cache": false
     }
   }
 }

@@ -1,0 +1,12 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "services/*"
+  - "packages/config/*"
+  - "packages/config/storybook"
+  - "packages/config/tailwind"
+  - "packages/config/shadcn"
+  - "packages/config/redux"
+  - "packages/config/eslint"
+  - "packages/config/prettier"
+  - "packages/config/typescript"
